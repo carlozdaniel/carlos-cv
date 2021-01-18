@@ -26,14 +26,31 @@ function scrollActive(){
   sections.forEach(current =>{
     const sectionHeight = current.offsetHeight
     const sectionTop = current.offsetTop - 50
-    sectionId = current.getAttribute('')
+    sectionId = current.getAttribute('id')
     if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-      docuemnt.querySelector('.nav__menu a[href*=' + sectionId + '']).classList.add('active-link')
+      docuemnt.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
     }else{
-      docuemnt.querySelector('.nav__menu a[href*=' + sectionId + '']).classList.remove('active-link')
+      docuemnt.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
     }
-
   })
 }
-/*===== mixtitup file=====*/
+
+window.addEventListener('scroll',scrollActive)
 /*===== change backgraund header =====*/
+function scrollHeader(){
+  const header = docuemnt.getElementById('header')
+  if(this.scrollY >= 200) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
+
+}
+window.addEventListener('scroll',scrollActive)
+
+/*===== change background header =====*/
+function scrollTop(){
+  const scrollTop = docuemnt.getElementById('scroll-top')
+  if(this.scrollY >= 560) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
+
+}
+window.addEventListener('scroll',scrollActiveTop)
+
+
+
