@@ -233,7 +233,7 @@ img{
   overflow: hidden;
 }
 .home__container{
-  position: relative;
+  position : relative;
   height: calc(100vh - var(--header-height));
   grid-template-rows: repeat(2, max-content);
   align-content: space-around;
@@ -244,7 +244,7 @@ img{
   border-left: 4px solid var(--first-color-lighten);
   color: var(--first-color-lighten);
   padding-left: 1.5rem;
-  z-index: var(--z-tooltip);
+  z-index: var(--z-tooltip); 
 }
 .home_name{
   font-size: var(--biggert-font-size);
@@ -306,3 +306,28 @@ img{
 .button-light{
   background-color: var(--first-color-light);
 }
+
+.about__data{
+  text-align: center;
+}
+
+.about__description span{
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--first-color);
+  display: block;
+}
+
+.about__number{
+  font-size: var(--h1-font-size);
+  color: var(--first-color);
+  display: block;
+}
+.about__img{
+  justify-self: center;
+  width:  220px;
+  border-radius: .5rem;
+}
+
+
+
