@@ -474,7 +474,10 @@ box-shadow: 0 6px 9px rgba(174,190,205,.4);
   transform:  scale(1.02);
 }
 
-
+.active-portfolio{
+  color: var(--first-color-dark);
+  font-weight: var(--font-semi-bold);
+}
 
 
 
