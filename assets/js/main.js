@@ -64,3 +64,10 @@ const mixer = mixitup('.portfolio__container', {
 
 const linkPortfolio = document.querySelectorAll('.portfolio__item')
 
+function activePortfolio(){
+  if(linkPortfolio){
+    linkPortfolio.forEach(L => l.classList.remove('active-portfolio'))
+    this.classList.add('active-portfolio')
+  }
+}
+linkPortfolio.forEach(L => l.addEventListener('click', activePortfolio))
