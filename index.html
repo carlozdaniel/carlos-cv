@@ -216,14 +216,22 @@
     <span class="section-subtitle">My recent works</span>
     <h2 class="section-title">portfolio</h2>
     <div class="portfolio__nav">
-      <span class="portfolio__item">All</span>
-      <span class="portfolio__item">Web</span>
-      <span class="portfolio__item">Ui/Ux</span>
-      <span class="portfolio__item">App</span>
+      <span class="portfolio__item" data-filter="all">All</span>
+      <span class="portfolio__item" data-filter=".web">Web</span>
+      <span class="portfolio__item" data-filter=".ux">Ui/Ux</span>
+      <span class="portfolio__item" data-filter=".api">Api</span>
     </div>
     
-    <div class="portfolio__content bd-grid">
-      <div class="portfolio__content"><!-- 1 -->
+    <div class="portfolio__container bd-grid">
+      <div class="portfolio__content mix all"><!-- 1 -->
+        <a href="#"><img src="assets/img/work1.jpg" alt="" class="portfolio__img"></a>
+        <div class="portfolio__data">
+          <span class="portfolio__sebtitle">todo app</span>
+          <a href="#"><h2 class="portfolio__subtitle">app Ruby on Rails</h2></a>
+          <a href="#" class="button button-link">view details</a>
+        </div>
+      </div>
+      <div class="portfolio__content mix all"><!-- 1 -->
         <a href="#"><img src="assets/img/work1.jpg" alt="" class="portfolio__img"></a>
         <div class="portfolio__data">
           <span class="portfolio__sebtitle">todo app</span>
@@ -232,7 +240,15 @@
         </div>
       </div>
 
-      <div class="portfolio__content"><!-- 2 -->
+      <div class="portfolio__content mix web "><!-- 2 -->
+        <a href="#"><img src="assets/img/work2.jpg" alt="" class="portfolio__img"></a>
+        <div class="portfolio__data">
+          <span class="portfolio__sebtitle">Donadores compulsivos</span>
+          <a href="#"><h2 class="portfolio__subtitle">proyect in ruby on rails</h2></a>
+          <a href="#" class="button button-link">view details</a>
+        </div>
+      </div>
+      <div class="portfolio__content mix web "><!-- 2 -->
         <a href="#"><img src="assets/img/work2.jpg" alt="" class="portfolio__img"></a>
         <div class="portfolio__data">
           <span class="portfolio__sebtitle">Donadores compulsivos</span>
@@ -241,7 +257,15 @@
         </div>
       </div>
 
-      <div class="portfolio__content"><!-- 3 -->
+      <div class="portfolio__content mix ux"><!-- 3 -->
+        <a href="#"><img src="assets/img/work3.jpg" alt="" class="portfolio__img"></a>
+        <div class="portfolio__data">
+          <span class="portfolio__sebtitle">apim rails</span>
+          <a href="#"><h2 class="portfolio__subtitle">new portfolio of </h2></a>
+          <a href="#" class="button button-link">view details</a>
+        </div>
+      </div>
+      <div class="portfolio__content mix ux"><!-- 3 -->
         <a href="#"><img src="assets/img/work3.jpg" alt="" class="portfolio__img"></a>
         <div class="portfolio__data">
           <span class="portfolio__sebtitle">apim rails</span>
@@ -250,7 +274,15 @@
         </div>
       </div>
 
-      <div class="portfolio__content"><!-- 4 -->
+      <div class="portfolio__content mix api"><!-- 4 -->
+        <a href="#"><img src="assets/img/work4.jpg" alt="" class="portfolio__img"></a>
+        <div class="portfolio__data">
+          <span class="portfolio__sebtitle">web developer</span>
+          <a href="#"><h2 class="portfolio__subtitle">new portfolio of </h2></a>
+          <a href="#" class="button button-link">view details</a>
+        </div>
+      </div>
+      <div class="portfolio__content mix api"><!-- 4 -->
         <a href="#"><img src="assets/img/work4.jpg" alt="" class="portfolio__img"></a>
         <div class="portfolio__data">
           <span class="portfolio__sebtitle">web developer</span>
@@ -264,7 +296,7 @@
 </main>
   <!--===== footer =====-->
   <!--===== mixitup filter =====-->
-  <script src=""></script>
+  <script src="assets/js/mixitup.min.js"></script>
   <!--===== swiper js =====-->
 
   <script src=""></script>
