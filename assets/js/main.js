@@ -64,3 +64,22 @@ const mixer = mixitup('.portfolio__container', {
 
 const linkPortfolio = document.querySelectorAll('.portfolio__item')
 
+function activePortfolio(){
+  if(linkPortfolio){
+    linkPortfolio.forEach(L => l.classList.remove('active-portfolio'))
+    this.classList.add('active-portfolio')
+  }
+}
+linkPortfolio.forEach(L => l.addEventListener('click', activePortfolio))
+
+/* swiper carousel */
+const mySwiper = new Swiper('.tes', {
+  spaceBetween: 16,
+  loop: true,
+  grabCursor: true,
+  
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+})
