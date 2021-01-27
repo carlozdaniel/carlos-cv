@@ -10,6 +10,8 @@ const showMenu = (toggleId,navId) =>{
   }
 }
 showMenu('nav-toggle','nav-menu')
+
+
 /*===== revome menu mobile =====*/
 const navLink = document.querySelectorAll('.nav__link')
 
@@ -18,6 +20,8 @@ function linkAction(){
   navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click',linkAction))
+
+
 
 /*===== scroll sections active links =====*/
 const sections = document.querySelectorAll('section[id]')
@@ -38,12 +42,17 @@ function scrollActive(){
 
 window.addEventListener('scroll',scrollActive)
 /*===== change backgraund header =====*/
+
 function scrollHeader(){
   const header = document.getElementById('header')
   if(this.scrollY >= 200) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
 
 }
 window.addEventListener('scroll',scrollHeader)
+
+
+
+
 
 /*===== change background header =====*/
 function scrollTop(){
@@ -73,13 +82,29 @@ function activePortfolio(){
 linkPortfolio.forEach(L => l.addEventListener('click', activePortfolio))
 
 /* swiper carousel */
-const mySwiper = new Swiper('.tes', {
+const mySwiper = new Swiper('.testimonial__container', {
   spaceBetween: 16,
   loop: true,
   grabCursor: true,
-  
+
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
   },
+  breakpoints:{
+    640:{
+      slidesPerView: 2,
+    },
+    1024:{
+    slidesPerView: 3,
+    },
+  }
 })
+gsap.from('.home__img', {opacity: 0, duration: 2, delay:.5, x:60})
+gsap.from('.home__data', {opacity: 0, duration: 2, delay:.8, y:25})
+
+
+
+
+
+
