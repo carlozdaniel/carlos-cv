@@ -1,4 +1,4 @@
-/*===== show menu=====*/
+/*===== SHOW MENU =====*/
 const showMenu = (toggleId,navId) =>{
   const toggle = document.getElementById(toggleId),
   nav = document.getElementById(navId)
@@ -11,8 +11,7 @@ const showMenu = (toggleId,navId) =>{
 }
 showMenu('nav-toggle','nav-menu')
 
-
-/*===== revome menu mobile =====*/
+/*===== REMOVE MENU MOBILE =====*/
 const navLink = document.querySelectorAll('.nav__link')
 
 function linkAction(){
@@ -21,9 +20,7 @@ function linkAction(){
 }
 navLink.forEach(n => n.addEventListener('click',linkAction))
 
-
-
-/*===== scroll sections active links =====*/
+/*===== SCROLL SECTIONS ACTIVE LINK =====*/
 const sections = document.querySelectorAll('section[id]')
 
 function scrollActive(){
@@ -41,8 +38,9 @@ function scrollActive(){
 }
 
 window.addEventListener('scroll',scrollActive)
-/*===== change backgraund header =====*/
 
+
+/*===== CHANGE BACKGROUND HEADER =====*/
 function scrollHeader(){
   const header = document.getElementById('header')
   if(this.scrollY >= 200) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
@@ -50,11 +48,7 @@ function scrollHeader(){
 }
 window.addEventListener('scroll',scrollHeader)
 
-
-
-
-
-/*===== change background header =====*/
+/*===== SHOW SCROLL TOP =====*/
 function scrollTop(){
   const scrollTop = document.getElementById('scroll-top')
   if(this.scrollY >= 560) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
@@ -62,6 +56,7 @@ function scrollTop(){
 }
 window.addEventListener('scroll',scrollTop)
 
+/*===== MIXITUP FILTER PORTFOLIO =====*/
 const mixer = mixitup('.portfolio__container', {
   selectors: {
       target: '.portfolio__content'
@@ -70,7 +65,7 @@ const mixer = mixitup('.portfolio__container', {
       duration: 400
   }
 });
-
+/* Link active portfolio */
 const linkPortfolio = document.querySelectorAll('.portfolio__item')
 
 function activePortfolio(){
@@ -81,7 +76,8 @@ function activePortfolio(){
 }
 linkPortfolio.forEach(L => l.addEventListener('click', activePortfolio))
 
-/* swiper carousel */
+
+/*===== SWIPER CAROUSEL =====*/ 
 const mySwiper = new Swiper('.testimonial__container', {
   spaceBetween: 16,
   loop: true,
@@ -100,10 +96,9 @@ const mySwiper = new Swiper('.testimonial__container', {
     },
   }
 })
+/*===== GSAP ANIMATION =====*/ 
 gsap.from('.home__img', {opacity: 0, duration: 2, delay:.5, x:60})
 gsap.from('.home__data', {opacity: 0, duration: 2, delay:.8, y:25})
-
-
 
 
 
