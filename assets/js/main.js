@@ -97,10 +97,3 @@ const mySwiper = new Swiper('.testimonial__container', {
   }
 })
 /*===== GSAP ANIMATION =====*/ 
-gsap.to('.home__img', {opacity: 0, duration: 2, delay:.5, x:60})
-gsap.to('.home__data', {opacity: 0, duration: 2, delay:.8, y:25})
-gsap.from('.home__greeting', {opacity: 0, duration: 2, delay:.8, y:25})
-
-
-
-

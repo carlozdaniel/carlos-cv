@@ -184,6 +184,72 @@
                 </div>
             </section>
 
+          <section  z-index: -1;>
+            <div class="process-wrapper">
+              <div id="progress-bar-container">
+                <ul>
+                  <li class="step step01 active"><div class="step-inner">2016</div></li>
+                  <li class="step step02"><div class="step-inner">2018</div></li>
+                  <li class="step step03"><div class="step-inner">2019</div></li>
+                  <li class="step step04"><div class="step-inner">2020</div></li>
+                  <li class="step step05"><div class="step-inner">2020</div></li>
+                </ul>
+                
+                <div id="line">
+                  <div id="line-progress"></div>
+                </div>
+              </div>
+              
+              <div id="progress-content-section">
+                <div class="section-content discovery active">
+                  <h2>School Projects</h2>
+                  <h5>SEPTEMBER 2016 — JULY 2019</h5>
+                  <p>I developed an "Online Exam Emulator" system with technologies such as
+                    PHP and JavaScript.
+                    I developed an E-commerce system similar to Mercado Libre as a school
+                    project, with PHP Laravel and JavaScript.
+                    I have participated giving courses on the use of Git and GitHub in my university.
+                  </p>
+                </div>
+                
+                <div class="section-content strategy">
+                  <h2>Intern, at Tecnocible</h2>
+                  <h5>MARCH 2018 — AUGUST 2018</h5>
+                  <p>I did my TSU internship at the company Tecnocible for 4 months. I had the
+                    opportunity to develop a project that solved the problem of a newspaper
+                    company in the city of Colima. I made use of technologies such as PHP,
+                    MySQL, JQuery, JavaScript and Bootstrap.
+                    In this company, we apply the agile Scrum methodology for project delivery.</p>
+                </div>
+                
+                <div class="section-content creative">
+                  <h2>Project manager, Magsan Motors</h2>
+                  <h5>OCTOBER 2018 — NOVEMBER 2019</h5>
+                  <p>In the company MAGSAN MOTORS, I worked 9 months as project
+                    leader, I also participated in the development of an operating system of
+                    an electric car, using technologies such as Java and different types of
+                    sensors, in this project also Scrum methodology was implemented.</p>
+                </div>
+                
+                <div class="section-content production">
+                  <h2>Developer, BrightCoders Academy</h2>
+                  <h5>JANUARY 2020 — MAY 2020</h5>
+                  <p>I participated in the BrightCoders program working on multiple projects
+                    using technologies such as Ruby on Rails JavaScript, jQuery, Sass, Git,
+                    AWS, Scrum, Sidekiq, PostgreSQL, Redis as well as testing with Rspec
+                    and Capybara.</p>
+                </div>
+                
+                <div class="section-content analysis">
+                  <h2>Ruby on Rails Web Developer, Ectotec</h2>
+                  <h5>SEPTEMBER 2020 — NOVEMBER 2020</h5>
+                  <p>In this company I was a Rails Developer using technologies such as
+                    Jasper soft and MYSQL as a database manager in this company I had
+                    the opportunity to work debugging errors of a school system.</p>
+                </div>
+                </div>
+              </div>
+            
             <!--===== SERVICES =====-->
             <section class="services section bd-container" id="services">
                 <span class="section-subtitle">What is offered</span>
@@ -441,9 +507,46 @@
               gsap.from('.home__social-item', {opacity: 0, duration: 2, delay:2.3, y:25, ease:'expo.out', stagger: .2})
               
           }, 1000)
+
+          
       </script>
         <script src="assets/js/gsap.min.js"></script>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script>
+    
+          $(".step").click( function() {
+        $(this).addClass("active").prevAll().addClass("active");
+        $(this).nextAll().removeClass("active");
+      });
+      
+      $(".step01").click( function() {
+        $("#line-progress").css("width", "3%");
+        $(".discovery").addClass("active").siblings().removeClass("active");
+      });
+      
+      $(".step02").click( function() {
+        $("#line-progress").css("width", "25%");
+        $(".strategy").addClass("active").siblings().removeClass("active");
+      });
+      
+      $(".step03").click( function() {
+        $("#line-progress").css("width", "50%");
+        $(".creative").addClass("active").siblings().removeClass("active");
+      });
+      
+      $(".step04").click( function() {
+        $("#line-progress").css("width", "75%");
+        $(".production").addClass("active").siblings().removeClass("active");
+      });
+      
+      $(".step05").click( function() {
+        $("#line-progress").css("width", "100%");
+        $(".analysis").addClass("active").siblings().removeClass("active");
+      });
+      
+       
+          </script>
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
     </body>
