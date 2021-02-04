@@ -492,10 +492,16 @@
         </footer>
 
         <!-- ===== MIXITUP FILTER ===== -->
-        <scrip src="assets/js/mixitup.min.js"></scrip>
+        <script src="assets/js/mixitup.min.js"></script>
+
+        <!-- ===== SWIPER JS ===== -->
         <script src="assets/js/swiper-bundle.min.js"></script>
 
-       <!-- ===== GSAP ANIMATION ===== --> 
+        <!-- ===== GSAP ===== -->
+        <script src="assets/js/gsap.min.js"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
         <script>
           setTimeout(()=>{
               const tl = gsap.timeline();
@@ -505,7 +511,7 @@
 
               gsap.from('.nav__logo, .nav__to', {opacity: 0, duration: 2, delay:1.5, y:25, ease:'expo.out', stagger: .2})
               gsap.from('.nav__item', {opacity: 0, duration: 2, delay:1.8, y:25, ease:'expo.out', stagger: .2})
-              gsap.from('.home__social-item', {opacity: 0, duration: 2, delay:2.3, y:25, ease:'expo.out', stagger: .2})
+              gsap.from('.home__social-icon', {opacity: 0, duration: 2, delay:2.3, y:25, ease:'expo.out', stagger: .2})
               
           }, 1000)
 
@@ -549,6 +555,5 @@
        
           </script>
         <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
     </body>
 </html>
