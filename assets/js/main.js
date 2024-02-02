@@ -26,7 +26,7 @@ const sections = document.querySelectorAll('section[id]')
 function scrollActive(){
   const scrollY = window.pageYOffset
   sections.forEach(current =>{
-    const sectionHeight = current.offsetHeight 
+    const sectionHeight = current.offsetHeight
     const sectionTop = current.offsetTop - 50
     sectionId  = current.getAttribute('id')
     if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
@@ -56,6 +56,25 @@ function scrollTop(){
 }
 window.addEventListener('scroll',scrollTop)
 
+/*===== CHANGE IMAGE ON SCROLL =====*/
+function changeImageOnScroll() {
+  const image = document.querySelector('.home__img img'); // Asegúrate de que este selector coincida con tu imagen en HTML
+  const scrollY = window.pageYOffset;
+
+  // Cambiar la imagen dependiendo de la posición de scroll
+  if (scrollY > 100 && image.getAttribute('src') !== 'assets/img/yo1.png') {
+    image.src = 'assets/img/yo1.png'; // Cambia a la imagen con un ojo cerrado
+
+    // Cambia la imagen de nuevo a la original después de 1 segundo
+    setTimeout(function() {
+      image.src = 'assets/img/yo2.png';
+    }, 200); // 1000ms = 1 segundo
+  }
+}
+
+// Escucha el evento de scroll y llama a la función changeImageOnScroll
+window.addEventListener('scroll', changeImageOnScroll);
+
 /*===== MIXITUP FILTER PORTFOLIO =====*/
 const mixer = mixitup('.portfolio__container', {
   selectors: {
@@ -77,7 +96,7 @@ function activePortfolio(){
 linkPortfolio.forEach(L => l.addEventListener('click', activePortfolio))
 
 
-/*===== SWIPER CAROUSEL =====*/ 
+/*===== SWIPER CAROUSEL =====*/
 const mySwiper = new Swiper('.testimonial__container', {
   spaceBetween: 16,
   loop: true,
@@ -96,4 +115,4 @@ const mySwiper = new Swiper('.testimonial__container', {
     },
   }
 })
-/*===== GSAP ANIMATION =====*/ 
+/*===== GSAP ANIMATION =====*/
